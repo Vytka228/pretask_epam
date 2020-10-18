@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css"  href="style.css" />
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+
+<body translate="no" >
+  <style id="inverter" media="none">
+  html { background-color: #eee; filter: invert(100%) }
+  * { background-color: inherit }
+  img:not([src*=".svg"]), [style*="url("] { filter: invert(100%) }
+</style>
+
+  <label class="button">
+    <input type="checkbox" id="themer">
+    Dark theme: <span aria-hidden="true"></span>
+ </label>
+ 
+    <div class="container">
+      <h1>Sign Up</h1>
+      <hr>
+	  
+	  <label for="Login"><b>login</b></label>
+      <input type="text" placeholder="Login" name="log" id="login" required>
+	  
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+
+      <div class="clearfix">
+        <button onclick="toJSON()" class="signupbtn">Sign Up</button>
+      </div>
+  
+    <script>
+		var checkbox = document.getElementById('themer');
+		var invertor = document.getElementById('inverter');
+
+		checkbox.addEventListener('change', function () {
+		  // Triggers repaint in most browsers:
+		  invertor.setAttribute('media', this.checked ? 'screen' : 'none');
+		  // Forces repaint in Chrome:
+		  invertor.textContent = invertor.textContent.trim();
+		  
+		});
+		//# sourceURL=pen.js
+
+
+		function toJSON() { 
+			let obj = { table: [] }; 
+			obj.table.push({login: document.getElementById("login").value, password:document.getElementById("password").value, email:document.getElementById("email").value}); 
+			var json = JSON.stringify(obj); 
+			console.log(obj);
+		}
+    </script>
+</body>
+</html>
