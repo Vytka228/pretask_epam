@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+    <link id = "table-style" rel="stylesheet" href="table1.css">
+
+</head>
+<body>
+
+<header class="header">
+  <h1>IntelShop</h1>
+  <p>better than competitorsp.</p>
+</header>
+   <div class="tab">
+   <a href = "main.html" target = "_blank"><button class="tablinks" onclick="openCity(event, )"><em>main</em></button></a>
+   <a href = "table.html" target = "_blank"><button class="tablinks" onclick="openCity(event)"><em>table</em></button></a>
+   <a href = "about.html" target = "_blank"><button class="tablinks" onclick="openCity(event)"><em>about</em></button></a>
+</div>
+<div id="main" class="tabcontent">
+ <p align = "center">
+            Автор проекта: Моисеенко М. А.<br>
+            Автор желает RTX 3080<br>
+            Для связи использовать<br>
+        </p>
+        <div id = "links" align = "center">
+            <a href = "https://vk.com/idvytka" target = "_blank">Вконтакте</a>
+            <a href = "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target = "_blank">Gmail</a>
+</div>
+</div>
+
+<footer class="footer">
+   <p>Моисеенко В. А</p>
+    <div id = "date-block"></div>
+    <p>версия сайта: v0.03a </p>
+</footer>
+<script>
+// функция добавления нулей в дате (т.е. если месяц 2, то выведет 02)
+function zero_first_format(value) {
+    if (value < 10) {value='0'+value;}
+    return value;
+}
+// функция вывода даты
+function date_time() {
+    var current_datetime = new Date();
+    return "Сегодня: " + zero_first_format(current_datetime.getDate()) + "." + zero_first_format(current_datetime.getMonth()+1) + "." + (current_datetime.getFullYear());
+}
+document.getElementById("date-block").innerHTML = date_time(); //дата
+// функция смены стиля таблицы
+function styleNew(styleNew) {
+    document.getElementById('table-style').setAttribute('href', styleNew);
+}
+
+
+</script>
+     
+</body>
+</html> 
