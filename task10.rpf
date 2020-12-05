@@ -1,0 +1,7 @@
+ @prefix : <main.html/> 
+<futuri.us/> a :Website 
+<futuri.us/> dc:title "Intel" 
+<futuri.us/> dc:contributor "Vladmois" 
+<futuri.us/> dc:creator "Vladmois" 
+<futuri.us/> dc:language ru-RU 
+<futuri.us/> dc:rights by-nc-sa

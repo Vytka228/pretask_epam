@@ -1,0 +1,6 @@
+<rdf:rdf  xmlns:ns="main.html">
+<ns:person rdf:about="main.html/#main">
+ <ns:hastable rdf:resource="table.html/#table" />
+ <ns:hasabout rdf:resource="about.html/#about" />
+</ns:person>
+</rdf:rdf>
